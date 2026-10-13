@@ -3,18 +3,18 @@ const $$ = (s, root=document) => [...root.querySelectorAll(s)];
 const locations = [
  {id:1,name:'Koridor Sungai Deli',area:'Medan · ilustrasi',hazard:'banjir',risk:'Tinggi',level:'high',lat:3.596,lon:98.681,detail:'Contoh lokasi untuk demonstrasi pemetaan. Bukan penetapan zona bahaya resmi.'},
  {id:2,name:'Area aliran sungai',area:'Deli Serdang · ilustrasi',hazard:'banjir',risk:'Sedang',level:'medium',lat:3.535,lon:98.704,detail:'Tampilan contoh untuk memperagakan atribut lokasi dan kategori ancaman.'},
- {id:3,name:'Zona lereng perbukitan',area:'Karo · ilustrasi',hazard:'longsor',risk:'Tinggi',level:'high',lat:3.105,lon:98.49,detail:'Contoh lokasi longsor. Nilai risiko dan posisi penanda bukan data hasil analisis.'},
+ {id:3,name:'Kawasan Genangan',area:'Medan · ilustrasi',hazard:'banjir',risk:'Sedang',level:'medium',lat:3.55,lon:98.63,detail:'Contoh lokasi banjir. Nilai risiko dan posisi penanda bukan data hasil analisis.'},
  {id:4,name:'Area permukiman',area:'Medan · ilustrasi',hazard:'banjir',risk:'Rendah',level:'low',lat:3.575,lon:98.625,detail:'Contoh kategori rendah untuk menguji legenda dan filter peta.'}
 ];
 let reports = [
  {id:101,title:'Contoh genangan di ruas jalan',type:'banjir',area:'Koridor Sungai Deli',desc:'Data demonstrasi untuk menguji tampilan laporan.',time:'Hari ini · 09.20',status:'review'},
- {id:102,title:'Informasi kondisi lereng',type:'longsor',area:'Zona lereng perbukitan',desc:'Contoh laporan yang menunggu pemeriksaan.',time:'Hari ini · 08.45',status:'review'},
+ {id:102,title:'Genangan air di badan jalan utama',type:'banjir',area:'Medan Selayang',desc:'Air meluap akibat drainase yang kurang lancar.',time:'Hari ini · 08.45',status:'review'},
  {id:103,title:'Laporan simulasi genangan',type:'banjir',area:'Area permukiman',desc:'Laporan contoh berstatus terverifikasi untuk demo UI.',time:'Kemarin · 16.10',status:'verified'},
  {id:104,title:'Pemeriksaan saluran air',type:'banjir',area:'Area aliran sungai',desc:'Data simulasi, bukan laporan kejadian nyata.',time:'Kemarin · 11.30',status:'review'}
 ];
 const alerts = [
  {category:'BANJIR',state:'SIMULASI',title:'Informasi kewaspadaan genangan',text:'Contoh pesan untuk memperagakan bagaimana informasi ancaman dapat ditampilkan kepada pengguna.',source:'Contoh antarmuka',time:'Data ilustratif'},
- {category:'TANAH LONGSOR',state:'SIMULASI',title:'Perhatian terhadap kondisi lereng',text:'Contoh konten edukasi. Tidak menunjukkan kejadian atau peringatan aktif di lokasi tertentu.',source:'Contoh antarmuka',time:'Data ilustratif'},
+ {category:'BANJIR',state:'EDUKASI',title:'Kesiapsiagaan menghadapi luapan air',text:'Kenali jalur evakuasi terdekat dan amankan barang ke tempat yang lebih tinggi saat terjadi peningkatan debit air.',source:'Panduan mitigasi',time:'Informasi umum'},
  {category:'KESIAPSIAGAAN',state:'EDUKASI',title:'Pastikan informasi berasal dari sumber resmi',text:'Periksa pembaruan dari instansi berwenang dan ikuti arahan petugas saat terjadi keadaan darurat.',source:'Pesan edukasi',time:'Konten umum'}
 ];
 const colors = {high:{bg:'#fff0ed',color:'#c45c50',symbol:'!'},medium:{bg:'#fff5df',color:'#ae7a20',symbol:'⌁'},low:{bg:'#e8f5ec',color:'#38815e',symbol:'✓'}};
